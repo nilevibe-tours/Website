@@ -1,14 +1,14 @@
 <template>
   <section class="relative w-screen h-screen overflow-hidden">
     <video
+      class="absolute w-full h-full object-cover"
       autoplay
       muted
       loop
       playsinline
-      class="absolute top-0 left-0 w-full h-full object-cover"
     >
       <source src="/hero.mp4" type="video/mp4" />
-      <!-- Your browser does not support the video tag. -->
+      Your browser does not support the video tag.
     </video>
 
     <div class="absolute top-0 left-0 w-full h-full bg-black/50"></div>
