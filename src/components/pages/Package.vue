@@ -1,5 +1,7 @@
 <template>
-  <div class="flex justify-center items-center bg-white min-h-screen">
+  <div
+    class="flex justify-center items-center bg-white min-h-screen max-w-7xl mx-auto"
+  >
     <div class="flex flex-col lg:flex-row">
       <div class="w-full lg:w-1/2 h-72 lg:h-auto">
         <img
@@ -13,7 +15,7 @@
         <h1
           class="text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4 leading-tight"
         >
-          {{ packageData.title }}
+          {{ packageData.title }} package
         </h1>
 
         <div
