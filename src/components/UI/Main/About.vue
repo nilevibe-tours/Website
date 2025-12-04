@@ -1,18 +1,16 @@
 <template>
   <section class="bg-light py-20 px-6 text-dark" id="about">
     <div
-      class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center"
+      class="mx-auto grid lg:grid-cols-2 items-center"
       :dir="lang === 'en' ? 'ltr' : 'rtl'"
     >
-      <!-- Image with animation -->
       <div class="relative group">
         <img
           src="/logo.png"
           alt="NileVibe Tours"
-          class="rounded-2xl animate-scale w-full object-cover transition-transform duration-300"
+          class="rounded-2xl animate-scale w-full object-cover transition-transform duration-300 max-w-lg mx-auto"
         />
 
-        <!-- decorative shapes -->
         <div
           class="absolute -top-4 -right-4 bg-light-blue/30 w-20 h-20 rounded-full blur-2xl opacity-50"
         ></div>
@@ -21,7 +19,6 @@
         ></div>
       </div>
 
-      <!-- Text Content -->
       <div class="space-y-8 text-center lg:text-start">
         <h2
           class="text-4xl md:text-5xl font-extrabold text-light-blue leading-tight"

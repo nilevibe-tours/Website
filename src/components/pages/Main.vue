@@ -18,7 +18,7 @@
 import Hero from "../UI/Main/Hero.vue";
 import About from "../UI/Main/About.vue";
 import BookingForm from "../UI/Main/Booking-form.vue";
-import Destinations from "../UI/Main/Destinations.vue";
+import Destinations from "../UI/Main/Packages-list.vue";
 import MainFooter from "../UI/Main/Footer.vue";
 import { useMainStore } from "../../stores/main";
 const store = useMainStore();
