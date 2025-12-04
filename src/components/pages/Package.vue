@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-import { onBeforeMount, ref } from "vue";
+import { onBeforeMount, onMounted, ref } from "vue";
 import { useMainStore } from "../../stores/main";
 import packages from "../../../public/packages";
 import { useRouter } from "vue-router";
@@ -82,6 +82,14 @@ onBeforeMount(() => {
   );
   if (packageData.value == null) router.push({ name: "Main" });
 });
+
+onMounted(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
 function book() {
   store.setPackage(packageData.value.title);
 }
