@@ -3,14 +3,26 @@
     <hero />
     <about />
     <bookingForm />
-    <destinations />
-    <mainFooter />
-    <button
+    <section
+      id="destinations"
+      :dir="store.current === 'ar' ? 'rtl' : 'ltr'"
+      class="bg-light text-light-blue py-16 px-6"
+    >
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-3xl md:text-4xl font-extrabold mb-10 tracking-wide text-center text-dark"
+        >
+          {{ store.current === "ar" ? "الباقات" : "Packages" }}
+        </h2>
+        <destinations />
+      </div>
+    </section>
+    <!-- <button
       class="absolute z-50 right-4 top-4 cursor-pointer select-none bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-semibold transition duration-300 hover:bg-white/30 shadow-md"
       @click="store.toggleLang"
     >
       {{ store.current.toUpperCase() }}
-    </button>
+    </button> -->
   </div>
 </template>
 

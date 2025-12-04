@@ -7,12 +7,12 @@
         </h3>
         <ul class="space-y-2">
           <li>
-            <a href="#about" class="hover:text-golden">{{
+            <a href="/#about" class="hover:text-golden">{{
               lang === "en" ? "About Us" : "من نحن"
             }}</a>
           </li>
           <li>
-            <a href="#destinations" class="hover:text-golden">{{
+            <a href="/#destinations" class="hover:text-golden">{{
               lang === "en" ? "Destinations" : "الوجهات"
             }}</a>
           </li>

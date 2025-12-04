@@ -62,7 +62,7 @@
             {{ t("selectDestination") }}
           </option>
           <option v-for="item in packages" :value="item.title" :key="item">
-            {{ item.title }}
+            {{ item.title }} package
           </option>
           <option value="other">Other</option>
         </select>
