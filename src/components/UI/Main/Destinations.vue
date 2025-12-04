@@ -1,48 +1,42 @@
 <template>
-  <section class="bg-light text-golden py-12 px-6" id="destinations">
-    <div class="max-w-6xl mx-auto space-y-10">
-      <div
-        v-for="(item, idx) in destinations[store.current]"
-        :key="idx"
-        class="border border-golden/60 rounded-xl p-6 bg-dark shadow-md"
+  <section
+    id="destinations"
+    :dir="store.current === 'ar' ? 'rtl' : 'ltr'"
+    class="bg-light text-light-blue py-16 px-6"
+  >
+    <div class="max-w-7xl mx-auto">
+      <h2
+        class="text-3xl md:text-4xl font-extrabold mb-10 tracking-wide text-center text-dark"
       >
-        <!-- title -->
-        <h2 class="text-2xl font-bold mb-2">{{ item.title }}</h2>
-        <p class="text-sm text-golden/70 mb-6">{{ item.comment }}</p>
+        {{ store.current === "ar" ? "الباقات" : "Packages" }}
+      </h2>
 
-        <!-- program -->
-        <div class="space-y-6 mb-6">
-          <div
-            v-for="(activities, title) in item.program"
-            :key="title"
-            class="bg-light/20 p-4 rounded-lg border border-golden/20"
-          >
-            <h3 class="font-semibold text-lg text-golden mb-2">{{ title }}</h3>
-
-            <ul
-              class="list-disc pl-5 space-y-1 text-md text-light font-bold tracking-wide"
-            >
-              <li v-for="(activity, i) in activities" :key="i">
-                {{ activity }}
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Book button -->
-        <a
-          href="#booking"
-          class="inline-block mt-4 px-6 py-2 bg-golden text-dark font-semibold rounded-lg hover:bg-golden/80 transition"
-        >
-          Book Now
-        </a>
-      </div>
+      <ul
+        class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8 place-items-stretch"
+      >
+        <DestinationCard
+          v-for="(item, idx) in destinations[store.current]"
+          :key="idx"
+          :item="item"
+          @showPackage="openPackage"
+        />
+      </ul>
     </div>
+
+    <Destination v-if="packageData !== null" :package-data="packageData" />
   </section>
 </template>
 
 <script setup>
-import destinations from "../../../../destinations";
+import { ref } from "vue";
 import { useMainStore } from "../../../stores/main";
+import destinations from "../../../../destinations";
+import Destination from "../Destinations/Destination.vue";
+import DestinationCard from "../Destinations/card.vue";
+
 const store = useMainStore();
+const packageData = ref(null);
+function openPackage(pack) {
+  packageData.value = packageData.value === pack ? null : pack;
+}
 </script>

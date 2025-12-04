@@ -1,5 +1,5 @@
 <template>
-  <div class="w-screen h-screen overflow-x-hidden bg-dark">
+  <div class="w-screen h-screen overflow-x-hidden bg-dark scroll-smooth">
     <router-view></router-view>
   </div>
 </template>

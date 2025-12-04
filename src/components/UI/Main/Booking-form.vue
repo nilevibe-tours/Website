@@ -17,7 +17,7 @@
         <input
           v-model="guest.name"
           type="text"
-          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-yellow-300"
+          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-light-blue"
           required
         />
       </div>
@@ -30,7 +30,7 @@
         <input
           v-model="guest.email"
           type="email"
-          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-yellow-300"
+          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-light-blue"
           required
         />
       </div>
@@ -43,7 +43,7 @@
         <input
           v-model="guest.phone"
           type="tel"
-          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-yellow-300"
+          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-light-blue"
           required
         />
       </div>
@@ -55,7 +55,7 @@
         </label>
         <select
           v-model="guest.destination"
-          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-yellow-300"
+          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-light-blue"
           required
         >
           <option disabled value="">
@@ -78,7 +78,7 @@
           v-model.number="guest.number"
           type="number"
           min="1"
-          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-yellow-300"
+          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-light-blue"
           required
         />
       </div>
@@ -91,7 +91,7 @@
         <input
           v-model="guest.date"
           type="date"
-          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-yellow-300"
+          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-light-blue"
           required
         />
       </div>
@@ -104,7 +104,7 @@
         <textarea
           v-model="guest.notes"
           rows="3"
-          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-yellow-300"
+          class="w-full border px-3 py-2 rounded-lg focus:outline-none focus:ring focus:ring-light-blue"
           :required="guest.destination === 'other'"
         ></textarea>
       </div>
@@ -112,7 +112,7 @@
       <!-- Submit -->
       <button
         type="submit"
-        class="w-full bg-yellow-400 text-gray-900 font-bold py-3 rounded-xl hover:bg-yellow-500 transition"
+        class="w-full bg-light-blue text-white font-bold py-3 rounded-xl hover:bg-golden transition"
         :disabled="loading"
       >
         {{ loading ? t("sending") : t("bookNow") }}

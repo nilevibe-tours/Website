@@ -1,103 +1,54 @@
 const destinations = {
   en: [
     {
-      title: "Aswan 3 Days / 2 Nights",
-      comment:
-        "All transportation are air-conditioned, professional tour guides included.",
-      program: {
-        "Day 1": ["High Dam", "Unfinished Obelisk", "Philae Temple (by boat)"],
-        "Day 2": ["Abu Simple Temple", "Temple of Ramses II & Nefertari"],
-        "Day 3": [
-          "Visit Aswan Market & Nubian Village OR Transfer to Luxor via Kom Ombo & Edfu",
-        ],
-      },
+      title: "Aswan Nile Cruise",
+      price: "4800 EGP",
+      description:
+        "Enjoy a luxurious Nile cruise with guided tours to Philae Temple, Abu Simbel and Nubian Village. Includes transportation, accommodation, and professional tour guide.",
+      duration: "3 Days / 2 Nights",
+      img: "/assets/aswan.webp",
     },
     {
       title: "Luxor 3 Days / 2 Nights",
-      comment:
-        "All transportation are air-conditioned, professional tour guides included.",
-      program: {
-        "Day 1": ["Karnak Temple", "Luxor Temple", "Avenue of Sphinxes"],
-        "Day 2": [
-          "Valley of the Kings",
-          "Hatshepsut Temple",
-          "Colossi of Memnon",
-        ],
-        "Day 3": [
-          "Visit Luxor Market OR Transfer to Aswan via Kom Ombo & Edfu",
-        ],
-      },
+      price: "5000 EGP",
+      description:
+        "Explore the wonders of Luxor with visits to Karnak Temple, Luxor Temple, Valley of the Kings, and more. Includes transportation and professional tour guide.",
+      duration: "3 Days / 2 Nights",
+      img: "/assets/luxor.webp",
     },
     {
-      title: "Custom packages",
-      comment:
-        "All transportation are air-conditioned, professional tour guides included.",
-      program: {
-        "Aswan & Abu Simple": [
-          "High Dam",
-          "Unfinished Obelisk",
-          "Philae Temple (by boat)",
-        ],
-        Luxor: [
-          "Airport transportation",
-          "Karnak Temple",
-          "Luxor Temple",
-          "Avenue of Sphinxes",
-          "Valley of the Kings",
-          "Hatshepsut Temple",
-          "Colossi of Memnon",
-        ],
-      },
+      title: "Custom Packages",
+      price: "Varies",
+      description:
+        "Tailor your own Egypt tour combining Aswan, Luxor, and other destinations according to your interests and schedule. Includes transportation and guide.",
+      duration: "Flexible",
+      img: "/assets/aswan.webp",
     },
   ],
   ar: [
     {
-      title: "أسوان ٣ أيام / ليلتين",
-      comment:
-        "كل المواصلات المدعومة مكيفة و الرحلات مزودة بمرشدين سياحين محترفين",
-      program: {
-        "اليوم الأول": ["السد العالي", "المسلةالناقصة", "معبد فيلة بالمركب"],
-        "اليوم الثاني": ["معبد ابو سيمبل", "معبد رمسيس التاني و نفرتاري"],
-        "اليوم الثالث": [
-          "زيارة سوق أسوان والقرية النوبية أو الانتقال للأقصر عبر كوم أمبو وإدفو",
-        ],
-      },
+      title: "رحلة نيلية أسوان",
+      price: "٤٨٠٠ جنيه",
+      description:
+        "استمتع برحلة نيلية فاخرة مع جولات إرشادية لمعبد فيلة وأبو سمبل والقرية النوبية. تشمل المواصلات والإقامة ومرشد سياحي محترف.",
+      duration: "٣ أيام / ليلتين",
+      img: "/assets/aswan.webp",
     },
     {
       title: "الأقصر ٣ أيام / ليلتين",
-      comment:
-        "كل المواصلات المدعومة مكيفة و الرحلات مزودة بمرشدين سياحين محترفين",
-      program: {
-        "Day 1": [" معبد الكرنك", "معبد الاقصر", "طريق الكباش"],
-        "Day 2": ["وادي الملوك", "معبد حتشبسوت", "تمثالي ممنون"],
-        "Day 3": ["زيارة سوق الأقصر أو الانتقال لأسوان عبر كوم أمبو وإدفو"],
-      },
+      price: "٥٠٠٠ جنيه",
+      description:
+        "اكتشف عجائب الأقصر مع زيارات لمعبد الكرنك، معبد الأقصر، وادي الملوك والمزيد. تشمل المواصلات ومرشد سياحي محترف.",
+      duration: "٣ أيام / ليلتين",
+      img: "/assets/luxor.webp",
     },
     {
       title: "باقات مخصصة",
-      comment:
-        "كل المواصلات المدعومة مكيفة و الرحلات مزودة بمرشدين سياحين محترفين",
-      program: {
-        "اسوان و ابو سمبل": [
-          "استقبال من المطار",
-          "السد العالي",
-          "المسلةالناقصة",
-          "معبد فيلة بالمركب",
-          "معبد ابو سيمبل",
-          "معبد رمسيس التاني ",
-          "معبد نفرتاري",
-          "سوق اسوان",
-        ],
-        Luxor: [
-          "استقبال من المطار",
-          "معبد الكرنك",
-          "معبد الأقصر",
-          "طريق الكباش",
-          "وادي الملوك",
-          "معبد حتشبسوت",
-          "تمثالي ممنون",
-        ],
-      },
+      price: "حسب الطلب",
+      description:
+        "اصنع رحلتك الخاصة في مصر مع الجمع بين أسوان والأقصر ووجهات أخرى حسب اهتماماتك وجدولك. تشمل المواصلات والمرشد السياحي.",
+      duration: "مرن",
+      img: "/assets/aswan.webp",
     },
   ],
 };

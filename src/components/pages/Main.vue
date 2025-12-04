@@ -6,7 +6,7 @@
     <destinations />
     <mainFooter />
     <button
-      class="absolute right-4 top-4 cursor-pointer select-none bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-semibold transition duration-300 hover:bg-white/30 shadow-md"
+      class="absolute z-50 right-4 top-4 cursor-pointer select-none bg-white/20 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-semibold transition duration-300 hover:bg-white/30 shadow-md"
       @click="store.toggleLang"
     >
       {{ store.current.toUpperCase() }}
