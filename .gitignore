@@ -19,3 +19,5 @@ Thumbs.db
 # Build / Dist folders
 dist/
 api/dist/
+.vercel
+.env*.local

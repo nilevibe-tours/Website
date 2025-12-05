@@ -63,10 +63,10 @@
 </template>
 
 <script setup>
-import { onBeforeMount, onMounted, ref } from "vue";
+import { onBeforeMount, onMounted, ref, watch } from "vue";
 import { useMainStore } from "../../stores/main";
 import packages from "../../../public/packages";
-import { useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
 import PackagesList from "../UI/Main/Packages-list.vue";
 const store = useMainStore();
 const props = defineProps({
@@ -81,13 +81,6 @@ onBeforeMount(() => {
     (e) => e.title.toLowerCase() === props.title?.toLowerCase()
   );
   if (packageData.value == null) router.push({ name: "Main" });
-});
-
-onMounted(() => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
 });
 
 function book() {

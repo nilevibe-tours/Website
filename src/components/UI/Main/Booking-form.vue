@@ -199,19 +199,29 @@ async function handleSubmit() {
   success.value = false;
 
   try {
-    console.log("FORM DATA:", guest.value);
+    const res = await fetch("/api/sendEmail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(guest.value),
+    });
 
-    guest.value = {
-      name: "",
-      email: "",
-      phone: "",
-      destination: "",
-      number: "",
-      date: null,
-      notes: "",
-    };
+    if (res.ok) {
+      success.value = true;
 
-    success.value = true;
+      guest.value = {
+        name: "",
+        email: "",
+        phone: "",
+        destination: "",
+        number: "",
+        date: null,
+        notes: "",
+      };
+    } else {
+      console.console(await res.json());
+    }
   } catch (err) {
     console.error("ERROR:", err);
   }

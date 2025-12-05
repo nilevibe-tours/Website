@@ -1,7 +1,7 @@
 <template>
   <div class="w-screen h-screen overflow-x-hidden scroll-smooth relative">
     <NavBar />
-    <router-view></router-view>
+    <router-view :key="$route.fullPath"></router-view>
     <MainFooter />
   </div>
 </template>
