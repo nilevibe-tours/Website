@@ -57,7 +57,7 @@ import { useRouter } from "vue-router";
 
 const state = ref(false);
 
-const list = ref(useRouter().options.routes.slice(0, -3));
+const list = ref(useRouter().options.routes.slice(0, -2));
 </script>
 
 <style>
