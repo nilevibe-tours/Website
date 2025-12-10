@@ -130,7 +130,7 @@ async function handleSubmit() {
   success.value = false;
 
   try {
-    const res = await fetch("/api/sendEmail", {
+    const res = await fetch("/api/sendMsg", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
