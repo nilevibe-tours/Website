@@ -6,7 +6,7 @@
       :style="{ transform: `translateX(-${currentIndex * 100}%)` }"
     >
       <div
-        v-for="(image, index) in realImages"
+        v-for="(image, index) in images"
         :key="index"
         class="w-full h-full flex-shrink-0 relative"
       >
@@ -40,7 +40,7 @@
     <!-- Dots Navigation -->
     <div class="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-3">
       <span
-        v-for="(image, index) in realImages"
+        v-for="(image, index) in images"
         :key="index"
         @click="goToSlide(index)"
         :class="{
@@ -56,18 +56,17 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from "vue";
 
-const allImages = [
+const images = [
   "/assets/hero.webp",
   "/assets/hero2.webp",
   "/assets/hero3.webp",
   "/assets/hero4.webp",
 ];
-const realImages = ref(["/assets/hero.webp"]);
 const currentIndex = ref(0);
 let interval = null;
 
 const nextSlide = () => {
-  currentIndex.value = (currentIndex.value + 1) % realImages.length;
+  currentIndex.value = (currentIndex.value + 1) % images.length;
 };
 
 const goToSlide = (index) => {
@@ -75,9 +74,6 @@ const goToSlide = (index) => {
 };
 
 onMounted(() => {
-  setTimeout(() => {
-    realImages.value = allImages;
-  }, 1000);
 
   interval = setInterval(nextSlide, 2500);
 });
